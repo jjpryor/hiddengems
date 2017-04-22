@@ -1,0 +1,167 @@
+[root@r73s ~]# subscription-manager repos --enable rhel-7-server-optional-rpms --enable rhel-server-rhscl-7-rpms
+Repository 'rhel-7-server-optional-rpms' is enabled for this system.
+Repository 'rhel-server-rhscl-7-rpms' is enabled for this system.
+[root@r73s ~]# yum install rh-python35
+Loaded plugins: langpacks, product-id, search-disabled-repos, subscription-manager
+Resolving Dependencies
+--> Running transaction check
+---> Package rh-python35.x86_64 0:2.0-2.el7 will be installed
+--> Processing Dependency: rh-python35-python for package: rh-python35-2.0-2.el7.x86_64
+--> Processing Dependency: rh-python35-python-pip for package: rh-python35-2.0-2.el7.x86_64
+--> Processing Dependency: rh-python35-python-setuptools for package: rh-python35-2.0-2.el7.x86_64
+--> Processing Dependency: rh-python35-python-virtualenv for package: rh-python35-2.0-2.el7.x86_64
+--> Processing Dependency: rh-python35-runtime for package: rh-python35-2.0-2.el7.x86_64
+--> Running transaction check
+---> Package rh-python35-python.x86_64 0:3.5.1-11.el7 will be installed
+--> Processing Dependency: rh-python35-python-libs(x86-64) = 3.5.1-11.el7 for package: rh-python35-python-3.5.1-11.el7.x86_64
+--> Processing Dependency: libpython3.5m.so.rh-python35-1.0()(64bit) for package: rh-python35-python-3.5.1-11.el7.x86_64
+---> Package rh-python35-python-pip.noarch 0:7.1.0-2.el7 will be installed
+---> Package rh-python35-python-setuptools.noarch 0:18.0.1-2.el7 will be installed
+---> Package rh-python35-python-virtualenv.noarch 0:13.1.2-2.el7 will be installed
+--> Processing Dependency: rh-python35-python-devel for package: rh-python35-python-virtualenv-13.1.2-2.el7.noarch
+---> Package rh-python35-runtime.x86_64 0:2.0-2.el7 will be installed
+--> Running transaction check
+---> Package rh-python35-python-devel.x86_64 0:3.5.1-11.el7 will be installed
+--> Processing Dependency: scl-utils-build for package: rh-python35-python-devel-3.5.1-11.el7.x86_64
+---> Package rh-python35-python-libs.x86_64 0:3.5.1-11.el7 will be installed
+--> Running transaction check
+---> Package scl-utils-build.x86_64 0:20130529-17.el7_1 will be installed
+--> Processing Dependency: iso-codes for package: scl-utils-build-20130529-17.el7_1.x86_64
+--> Processing Dependency: redhat-rpm-config for package: scl-utils-build-20130529-17.el7_1.x86_64
+--> Running transaction check
+---> Package iso-codes.noarch 0:3.46-2.el7 will be installed
+--> Processing Dependency: xml-common for package: iso-codes-3.46-2.el7.noarch
+---> Package redhat-rpm-config.noarch 0:9.1.0-72.el7 will be installed
+--> Processing Dependency: dwz >= 0.4 for package: redhat-rpm-config-9.1.0-72.el7.noarch
+--> Processing Dependency: perl-srpm-macros for package: redhat-rpm-config-9.1.0-72.el7.noarch
+--> Running transaction check
+---> Package dwz.x86_64 0:0.11-3.el7 will be installed
+---> Package perl-srpm-macros.noarch 0:1-8.el7 will be installed
+---> Package xml-common.noarch 0:0.6.3-39.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=============================================================================================================
+ Package                           Arch       Version                  Repository                       Size
+=============================================================================================================
+Installing:
+ rh-python35                       x86_64     2.0-2.el7                rhel-server-rhscl-7-rpms        3.2 k
+Installing for dependencies:
+ dwz                               x86_64     0.11-3.el7               rhel-7-server-rpms               99 k
+ iso-codes                         noarch     3.46-2.el7               rhel-7-server-rpms              2.7 M
+ perl-srpm-macros                  noarch     1-8.el7                  rhel-7-server-rpms              4.7 k
+ redhat-rpm-config                 noarch     9.1.0-72.el7             rhel-7-server-rpms               78 k
+ rh-python35-python                x86_64     3.5.1-11.el7             rhel-server-rhscl-7-rpms         53 k
+ rh-python35-python-devel          x86_64     3.5.1-11.el7             rhel-server-rhscl-7-rpms        195 k
+ rh-python35-python-libs           x86_64     3.5.1-11.el7             rhel-server-rhscl-7-rpms        7.3 M
+ rh-python35-python-pip            noarch     7.1.0-2.el7              rhel-server-rhscl-7-rpms        1.5 M
+ rh-python35-python-setuptools     noarch     18.0.1-2.el7             rhel-server-rhscl-7-rpms        401 k
+ rh-python35-python-virtualenv     noarch     13.1.2-2.el7             rhel-server-rhscl-7-rpms        1.7 M
+ rh-python35-runtime               x86_64     2.0-2.el7                rhel-server-rhscl-7-rpms        1.1 M
+ scl-utils-build                   x86_64     20130529-17.el7_1        rhel-7-server-optional-rpms      17 k
+ xml-common                        noarch     0.6.3-39.el7             rhel-7-server-rpms               26 k
+
+Transaction Summary
+=============================================================================================================
+Install  1 Package (+13 Dependent packages)
+
+Total download size: 15 M
+Installed size: 65 M
+Is this ok [y/d/N]: y
+Downloading packages:
+(1/14): dwz-0.11-3.el7.x86_64.rpm                                                     |  99 kB  00:00:00     
+(2/14): iso-codes-3.46-2.el7.noarch.rpm                                               | 2.7 MB  00:00:00     
+(3/14): perl-srpm-macros-1-8.el7.noarch.rpm                                           | 4.7 kB  00:00:00     
+(4/14): rh-python35-2.0-2.el7.x86_64.rpm                                              | 3.2 kB  00:00:00     
+(5/14): redhat-rpm-config-9.1.0-72.el7.noarch.rpm                                     |  78 kB  00:00:00     
+(6/14): rh-python35-python-3.5.1-11.el7.x86_64.rpm                                    |  53 kB  00:00:00     
+(7/14): rh-python35-python-devel-3.5.1-11.el7.x86_64.rpm                              | 195 kB  00:00:00     
+(8/14): rh-python35-python-libs-3.5.1-11.el7.x86_64.rpm                               | 7.3 MB  00:00:00     
+(9/14): rh-python35-python-pip-7.1.0-2.el7.noarch.rpm                                 | 1.5 MB  00:00:00     
+(10/14): rh-python35-python-setuptools-18.0.1-2.el7.noarch.rpm                        | 401 kB  00:00:00     
+(11/14): rh-python35-python-virtualenv-13.1.2-2.el7.noarch.rpm                        | 1.7 MB  00:00:00     
+(12/14): scl-utils-build-20130529-17.el7_1.x86_64.rpm                                 |  17 kB  00:00:00     
+(13/14): rh-python35-runtime-2.0-2.el7.x86_64.rpm                                     | 1.1 MB  00:00:00     
+(14/14): xml-common-0.6.3-39.el7.noarch.rpm                                           |  26 kB  00:00:00     
+-------------------------------------------------------------------------------------------------------------
+Total                                                                        6.6 MB/s |  15 MB  00:00:02     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : rh-python35-runtime-2.0-2.el7.x86_64                                                     1/14 
+  Installing : rh-python35-python-pip-7.1.0-2.el7.noarch                                                2/14 
+  Installing : rh-python35-python-setuptools-18.0.1-2.el7.noarch                                        3/14 
+  Installing : rh-python35-python-3.5.1-11.el7.x86_64                                                   4/14 
+  Installing : rh-python35-python-libs-3.5.1-11.el7.x86_64                                              5/14 
+  Installing : dwz-0.11-3.el7.x86_64                                                                    6/14 
+  Installing : perl-srpm-macros-1-8.el7.noarch                                                          7/14 
+  Installing : redhat-rpm-config-9.1.0-72.el7.noarch                                                    8/14 
+  Installing : xml-common-0.6.3-39.el7.noarch                                                           9/14 
+  Installing : iso-codes-3.46-2.el7.noarch                                                             10/14 
+  Installing : scl-utils-build-20130529-17.el7_1.x86_64                                                11/14 
+  Installing : rh-python35-python-devel-3.5.1-11.el7.x86_64                                            12/14 
+  Installing : rh-python35-python-virtualenv-13.1.2-2.el7.noarch                                       13/14 
+  Installing : rh-python35-2.0-2.el7.x86_64                                                            14/14 
+rhel-7-server-optional-rpms/7Server/x86_64/productid                                  | 2.1 kB  00:00:00     
+rhel-7-server-rpms/7Server/x86_64/productid                                           | 2.1 kB  00:00:00     
+rhel-server-rhscl-7-rpms/7Server/x86_64/productid                                     | 2.1 kB  00:00:00     
+  Verifying  : rh-python35-runtime-2.0-2.el7.x86_64                                                     1/14 
+  Verifying  : rh-python35-python-virtualenv-13.1.2-2.el7.noarch                                        2/14 
+  Verifying  : xml-common-0.6.3-39.el7.noarch                                                           3/14 
+  Verifying  : rh-python35-python-pip-7.1.0-2.el7.noarch                                                4/14 
+  Verifying  : scl-utils-build-20130529-17.el7_1.x86_64                                                 5/14 
+  Verifying  : perl-srpm-macros-1-8.el7.noarch                                                          6/14 
+  Verifying  : rh-python35-python-3.5.1-11.el7.x86_64                                                   7/14 
+  Verifying  : rh-python35-python-setuptools-18.0.1-2.el7.noarch                                        8/14 
+  Verifying  : redhat-rpm-config-9.1.0-72.el7.noarch                                                    9/14 
+  Verifying  : rh-python35-2.0-2.el7.x86_64                                                            10/14 
+  Verifying  : rh-python35-python-libs-3.5.1-11.el7.x86_64                                             11/14 
+  Verifying  : iso-codes-3.46-2.el7.noarch                                                             12/14 
+  Verifying  : dwz-0.11-3.el7.x86_64                                                                   13/14 
+  Verifying  : rh-python35-python-devel-3.5.1-11.el7.x86_64                                            14/14 
+
+Installed:
+  rh-python35.x86_64 0:2.0-2.el7                                                                             
+
+Dependency Installed:
+  dwz.x86_64 0:0.11-3.el7                               iso-codes.noarch 0:3.46-2.el7                        
+  perl-srpm-macros.noarch 0:1-8.el7                     redhat-rpm-config.noarch 0:9.1.0-72.el7              
+  rh-python35-python.x86_64 0:3.5.1-11.el7              rh-python35-python-devel.x86_64 0:3.5.1-11.el7       
+  rh-python35-python-libs.x86_64 0:3.5.1-11.el7         rh-python35-python-pip.noarch 0:7.1.0-2.el7          
+  rh-python35-python-setuptools.noarch 0:18.0.1-2.el7   rh-python35-python-virtualenv.noarch 0:13.1.2-2.el7  
+  rh-python35-runtime.x86_64 0:2.0-2.el7                scl-utils-build.x86_64 0:20130529-17.el7_1           
+  xml-common.noarch 0:0.6.3-39.el7                     
+
+Complete!
+[root@r73s ~]# which python
+/usr/bin/python
+[root@r73s ~]# python --version
+Python 2.7.5
+[root@r73s ~]# scl enable rh-python35 bash
+[root@r73s ~]# which python
+/opt/rh/rh-python35/root/usr/bin/python
+[root@r73s ~]# python --version
+Python 3.5.1
+[root@r73s ~]# which pip
+/opt/rh/rh-python35/root/usr/bin/pip
+[root@r73s ~]# pip install cmd2
+You are using pip version 7.1.0, however version 9.0.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+Collecting cmd2
+  Downloading cmd2-0.7.0.tar.gz (371kB)
+    100% |████████████████████████████████| 372kB 1.5MB/s 
+Collecting pyparsing>=2.0.1 (from cmd2)
+  Downloading pyparsing-2.2.0-py2.py3-none-any.whl (56kB)
+    100% |████████████████████████████████| 57kB 5.4MB/s 
+Collecting six (from cmd2)
+  Downloading six-1.10.0-py2.py3-none-any.whl
+Installing collected packages: pyparsing, six, cmd2
+  Running setup.py install for cmd2
+Successfully installed cmd2-0.7.0 pyparsing-2.2.0 six-1.10.0
+[root@r73s ~]# exit
+exit
+[root@r73s ~]# which python
+/usr/bin/python
+[root@r73s ~]#
